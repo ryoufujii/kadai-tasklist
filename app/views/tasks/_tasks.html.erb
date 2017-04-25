@@ -1,5 +1,4 @@
 <ul class="media-list">
-  
 <% tasks.each do |task| %>
 
     
@@ -8,22 +7,22 @@
     <li class="media">
       <div class="media-left">
         <img class="media-object img-rounded" src="
-<%= gravatar_url(current_user, options = { size: 50 }) %>
-" alt="">
+          <%= gravatar_url(current_user, options = { size: 50 }) %>
+        " alt="">
       </div>
       <div class="media-body">
         <div>
-          
-<%= link_to user.name, user_path(user) %>
- <span class="text-muted">posted at 
-<%= task.created_at %>
-</span>
+            <%= link_to user.name, user_path(user) %>
+            <span class="text-muted">posted at 
+              <%= task.created_at %>
+            </span>
         </div>
         <div>
           <p>
-status : <%= task.status %>,
-content : <%= task.content %>
-</p>
+            <%= link_to task.id, task %>
+            status : <%= task.status %>,
+            content : <%= task.content %>
+          </p>
         </div>
       </div>
     </li>
